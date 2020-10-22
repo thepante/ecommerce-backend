@@ -1,0 +1,57 @@
+
+GET http://localhost:3000/products?cat=10 HTTP/1.1
+
+###
+
+GET http://localhost:3000/products?cat=10&max=13000 HTTP/1.1
+
+###
+GET http://localhost:3000/product/comments/32GI02QR HTTP/1.1
+
+###
+
+GET http://localhost:3000/product/info/32GI02QR HTTP/1.1
+
+###
+
+GET http://localhost:3000/ping HTTP/1.1
+
+###
+
+POST http://localhost:3000/comments HTTP/1.1
+Content-Type: application/json
+
+{
+  "product_id": "32GI02QR",
+  "score": 3,
+  "user": "Leo Facilisis",
+  "description": "Condimentum mattis pellentesque id nibh tortor id aliquet. Facilisis leo vel fringilla est ullamcorper eget nulla.",
+  "dateTime": "2020-02-21 15:05:22"
+}
+
+###
+
+POST http://localhost:3000/product HTTP/1.1
+Content-Type: application/json
+
+{
+  "category": 10,
+  "name": "Producto de Prueba",
+  "summary": "Descripción corta de producto, para mostrar en listado.",
+  "description": "Descripción larga del producto, para mostrar más detalle en el product-info.",
+  "cost": 15000,
+  "currency": "USD",
+  "images": [
+    "/view1.jpg",
+    "/view2.jpg"
+  ] 
+}
+
+###
+
+POST http://localhost:3000/removeproduct HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": "61II46TE"
+}
